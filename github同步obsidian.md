@@ -21,7 +21,7 @@ git init # 初始化仓库
 git remote add origin <远程仓库地址>#将你的本地仓库与远程仓库建立连接。
 git add --all #将所有文件添加到缓存区
 git commit -m "提交信息"
-git push -u origin main # 将你的提交推送到远程仓库中的`master`分支
+git push -u origin main # 将你的提交推送到远程仓库中的`main`分支
 ```
 出现以下提示，即上传成功
 ![同步成功|600](img/successupload.png)
