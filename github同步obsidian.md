@@ -29,6 +29,6 @@ git commit -m "提交信息"
 git push -u origin master # 将你的提交推送到远程仓库中的`master`分支
 ```
 出现以下提示，即上传成功
-![同步成功](img/successupload.png)
+![同步成功|600](img/successupload.png)
 
 
