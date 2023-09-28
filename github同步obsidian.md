@@ -28,7 +28,7 @@ git push -u origin main # 将你的提交推送到远程仓库中的`main`分支
 
 成功
 ![happyending](img/happyending.png)
-# 第二步：设置 Obsidian Git 插件进行后续的同步
+# 第三步：设置 Obsidian Git 插件进行后续的同步
 
 [[基本用法#5.6 obsidian git]]
 
