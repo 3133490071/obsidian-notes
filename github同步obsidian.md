@@ -28,11 +28,3 @@
 ```
 git rm .obsidian/workspace --cached
 ```
-
-## 如何查看文件变动 Timeline
-
-Obsidian 的 Obsidian Git 插件，主要作用是进行提交、拉取、推送这些操作。只能列举某次提交产生的所有变化，不能直观地看到单个文件变动的历史情况。
-
-VSCode 内置了一个非常方便的功能：Timeline，它可以清晰的看到每个文件在每次 Git 提交中的变化情况。
-
-你可以在 VSCode 中打开 Obsidian 仓库，在左侧文件目录下方找到“时间线”，就可以回顾这个文件经历了哪些版本了。
