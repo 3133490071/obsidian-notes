@@ -7,13 +7,7 @@
 创建成功后，找到HTTPS码，将其复制
 
 ![httpimg](img/img8.png)
-# 第二步：设置 Obsidian Git 插件进行后续的同步
-
-[[基本用法#5.6 obsidian git]]
-
-`Vault backup interval(minutes)`设置每几分钟同步一次
-![gitbackupset](img/gitbackupset.png)
-# 第三步：提交到Git
+# 第二步：提交到Git
 
 在要上传的库文件下新建一个`.gitignore`文件，在此文件中输入不想被提交的文件夹扩展名
 如 `.obsidian （配置文件）和  .trash（回收站文件）`
@@ -34,3 +28,9 @@ git push -u origin main # 将你的提交推送到远程仓库中的`master`分�
 
 成功
 ![happyending](img/happyending.png)
+# 第二步：设置 Obsidian Git 插件进行后续的同步
+
+[[基本用法#5.6 obsidian git]]
+
+`Vault backup interval(minutes)`设置每几分钟同步一次
+![gitbackupset](img/gitbackupset.png)
