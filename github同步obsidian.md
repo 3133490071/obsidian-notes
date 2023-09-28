@@ -31,4 +31,5 @@ git push -u origin master # 将你的提交推送到远程仓库中的`master`�
 出现以下提示，即上传成功
 ![同步成功|600](img/successupload.png)
 
-
+成功
+![happyending](img/happyending.png)
