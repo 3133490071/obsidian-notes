@@ -1,30 +1,34 @@
-# 使用 obsidian Git 自动备份笔记到 github
-1. 创建一个仓库。
-2. 同步仓库到本地。
-3. 合并 Obsidian 库和 Git 仓库。
-4. 安装 Obsidian Git 插件进行后续的同步。
-## 如何启用自动同步
+# 第一步：在 GitHub 平台中新建仓库
 
-刚开始使用时，你也许不习惯每次手动点一下 Pull 按钮。
+- **如果使用 Gitee** 在顶部导航条点击「+」>「新建仓库」，根据提示填写信息即可（暂不勾选给出的初始化选项）。
+- **如果使用 GitHub** 在顶部导航条点击「+」>「New Repository」，根据提示填写信息即可（暂不勾选给出的初始化选项）。
+![GitHub](img/img7.png)
+然后填写仓库名称，其他全部保持默认就可以。
+创建成功后，找到HTTPS码，将其复制
 
-那你可以在 Obsidian Git 插件里启用选项 `Auto Backup after file change` ，让它每隔一段时间自动进行同步，默认是 10 分钟进行一次推送。下面有一个 `Auto pull` 的选项，默认 10 分钟进行一次拉取。
+![httpimg](img/img8.png)
+# 第二步：设置 Obsidian Git 插件进行后续的同步
 
-## 如何解决文件同步冲突？
+[[基本用法#5.6 obsidian git]]
 
-如果你在一台电脑上改动了文件，但是忘记同步了，并且在自动同步之前关机了。然后继续在另一台电脑上修改了同一个文件，那么回到这台电脑上做同步时就有可能发生冲突了。
+`Vault backup interval(minutes)`设置每几分钟同步一次
+![gitbackupset](img/gitbackupset.png)
+# 第三步：提交到Git
 
-此时你可以选择自己手动解决这些冲突，在 Obsidian Git 界面中，每次提交时都会告诉你这些文件发生了哪些变化。
-
-由于 Git 的应用非常普遍，如果出现了其他报错，根据报错提示进行搜索，往往可以在搜索引擎中找到答案。
-
-## 不想同步布局和某些配置怎么办？
-
-通过调整 Git 仓库目录下的隐藏文件 .gitignore 文件，可以选择不同步某些文件。
-
-根据 Obsidian 的官方文档，他们建议你在 .gitignore 中添加 `.obsidian/workspace` 。
-
-如果你已经同步了，那就输入这行命令，这会从仓库中删除文件，未来也不再同步到仓库里，但保留本地文件。
-
+在要上传的库文件下新建一个`.gitignore`文件，在此文件中输入不想被提交的文件夹扩展名
+如 `.obsidian （配置文件）和  .trash（回收站文件）`
+![gitignore |400](img/gitignore.png)
+在空白处右键单击，在弹出的快捷菜单中选择 `Git Bash Here`
+![gitbash|500](img/img9.png)
+依次输入以下命令
 ```
-git rm .obsidian/workspace --cached
+git init # 初始化仓库
+git remote add origin <远程仓库地址>#将你的本地仓库与远程仓库建立连接。
+git add --all #将所有文件添加到缓存区
+git commit -m "提交信息"
+git push -u origin master # 将你的提交推送到远程仓库中的`master`分支
 ```
+出现以下提示，即上传成功
+![同步成功](img/successupload.png)
+
+
