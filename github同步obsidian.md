@@ -18,7 +18,8 @@
 在要上传的库文件下新建一个`.gitignore`文件，在此文件中输入不想被提交的文件夹扩展名
 如 `.obsidian （配置文件）和  .trash（回收站文件）`
 ![gitignore |400](img/gitignore.png)
-在空白处右键单击，在弹出的快捷菜单中选择 `Git Bash Here`
+在空白处右键单击，在弹出的快捷菜单中选择 `Git Bash Here`  
+
 ![gitbash|500](img/img9.png)
 依次输入以下命令
 ```
